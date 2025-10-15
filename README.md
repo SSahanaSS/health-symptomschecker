@@ -29,19 +29,19 @@ cd health-symptomschecker
 ```
 
 
-2.**Install dependencies**
+2. **Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-3.**Create .env file with your Google API key:**
+3. **Create .env file with your Google API key**
 
-4.**Run the Flask app:**
+4. **Run the Flask app:**
 ```bash
 
 python app.py
 ```
-5.**Run the frontend**
+5. **Run the frontend**
 ```bash
 npm start
 ```
@@ -59,11 +59,11 @@ npm start
 ---
 
 ## Example Output
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
+![alt text](./example%20images/image.png)
+![alt text](./example%20images/image-1.png)
+![alt text](./example%20images/image-2.png)
+![alt text](./example%20images/image-3.png)
+![alt text](./example%20images/image-4.png)
 
 
 ## Disclaimer
