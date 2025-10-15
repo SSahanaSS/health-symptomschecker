@@ -1,13 +1,16 @@
-// Navbar.jsx
 import React from "react";
-import './csscss/navbar.css'
+import "./csscss/navbar.css";
 
-function Navbar() {
+function Navbar({ onNavigate }) {
   return (
-    <nav className="navbar">
-      <div className="navbar-left">Healthcare Symptoms Checker</div>
-      <div className="navbar-right">History</div>
-    </nav>
+    <div className="navbar">
+      <div className="navbar-left" onClick={() => onNavigate("home")}>
+        Healthcare Symptom Checker
+      </div>
+      <div className="navbar-right" onClick={() => onNavigate("history")}>
+        History
+      </div>
+    </div>
   );
 }
 

@@ -1,14 +1,17 @@
-import logo from './logo.svg';
-//import './App.css';
-import Inputsum from './components/Inputsum';
-import Navbar from './components/Navbar';
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import Inputsum from "./components/Inputsum";
+import History from "./components/History";
+
 function App() {
+  const [page, setPage] = useState("home");
+
   return (
-    <div className="App">
-      <Navbar/>
-      <Inputsum/>
-      
-    </div>
+    <>
+      <Navbar onNavigate={setPage} />
+      {page === "home" && <Inputsum />}
+      {page === "history" && <History />}
+    </>
   );
 }
 

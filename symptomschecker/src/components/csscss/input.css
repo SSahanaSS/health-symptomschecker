@@ -1,67 +1,89 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc; /* soft professional background */
+    font-family: "Poppins", sans-serif;
+    color: #1e293b;
+}
+
+/* Main Container */
 /* Container */
+/* Container (content below navbar) */
 .Conta {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: 100vh;
+    min-height: calc(100vh - 60px); /* ✅ full height minus navbar height */
     padding: 40px 20px;
-    background: linear-gradient(135deg, #e9f0ff, #f8faff);
+
+    /* ✅ Background image starts below navbar */
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.85)),
+        url("../doctor-icon-virtual-screen-health-care-and-medical-on-background-copy-space-free-photo.jpg") no-repeat center top;
+    background-size:cover; /* ✅ show full image without cropping */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
     font-family: "Poppins", sans-serif;
 }
 
-/* Cards */
+
+
+/* Card Base */
 .card {
     width: 100%;
-    max-width: 480px; /* increased slightly for balance */
+    max-width: 480px;
     background: #ffffff;
-    border-radius: 18px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-    padding: 28px 32px; /* equal left-right padding */
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    padding: 32px;
     margin-top: 30px;
-    margin-left: auto;  /* ✅ ensures equal left-right spacing */
-    margin-right: auto; /* ✅ ensures equal left-right spacing */
-    transition: all 0.2s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 
 /* Input Card */
 .input-card {
     text-align: center;
-    background: #fefefe;
 }
 
 /* Header Label */
 .chat-header {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 14px;
+    color: #0f172a;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
 }
 
-/* Text Input */
+/* Input Box */
 .message-input {
     width: 100%;
     padding: 12px 1px;
     font-size: 15px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #d1d5db;
     border-radius: 10px;
-    outline: none;
-    background: #f9fafb;
-    transition: border 0.3s;
+    background-color: #f9fafb;
+    transition: all 0.3s ease;
 }
 
 .message-input:focus {
     border-color: #007bff;
     background-color: #ffffff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.1);
 }
 
 /* Submit Button */
 .send-button {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 14px;
     padding: 12px 14px;
-    background-color: #007bff;
+    background-color: #12365e;
     color: white;
     font-weight: 600;
     font-size: 15px;
@@ -71,15 +93,13 @@
     transition: background 0.3s ease;
 }
 
-.send-button:hover {
-    background-color: #0056b3;
-}
 
-/* Result Sections */
+
+/* Result Section */
 .result-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 18px;
     margin-top: 25px;
 }
@@ -97,7 +117,7 @@
 .section ul {
     list-style-type: disc;
     margin-left: 20px;
-    color: #334155;
+    color: #192432;
     line-height: 1.6;
     font-size: 15px;
 }
@@ -108,25 +128,47 @@
     line-height: 1.6;
 }
 
-/* Disclaimer Styling */
+/* Disclaimer Card */
 .disclaimer-card {
-    background: #fff4f4;
+    background: #fff5f5;
     border-left: 5px solid #ef4444;
+    padding: 12px 16px;
+    border-radius: 10px;
 }
 
 .disclaimer-card h3 {
     border-color: #ef4444;
+    margin-bottom: 8px;
 }
 
-/* Responsive Fix */
+/* History List */
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    transition: background 0.2s ease;
+}
+
+li:hover {
+    background: #eef5ff;
+}
+
+/* Responsive */
 @media (max-width: 480px) {
     .card {
         width: 90%;
-        padding: 20px;
+        padding: 22px;
     }
 
     .chat-header {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .send-button {
